@@ -7,10 +7,11 @@ largest business academy in Copenhagen. I teach computer programming and basic
 Computer Science concepts to students of the Danish datamatiker study
 programme, a 2.5 year study programme focusing on hands-on software
 development. I have been a teacher there since 2024. Prior to that I spent many
-years as a teaching assistant at DIKU, the Department of Computer Science at
+years as a teaching assistant at [DIKU][diku], the Department of Computer Science at
 University of Copenhagen, rather than completing my degree.
 
 [ek]: https://kea.dk
+[diku]: https://di.ku.dk
 
 This blog is where I rant about teaching.
 
@@ -19,7 +20,7 @@ Besides this blog, you can find me here:
 - my old tech blog, [dev.to/sshine][dev-to],
 - my Nix learning site, [nix.tools][nix-tools],
 - my personal homepage, [simonshine.dk][simonshine-dk],
-- my GitHub account, [github.com/sshine][github]
+- my GitHub account, [github.com/sshine][github].
 
 [dev-to]: https://dev.to/sshine
 [nix-tools]: https://nix.tools
@@ -53,9 +54,7 @@ guarantee to be the best at what I teach, or even the best teacher in the
 classroom, but I can, without much competition, be the most transparent
 learner.
 
-## Why am I a teacher at a business academy?
-
-Why even work as a teacher at this point in life?
+## Why work as a teacher at this point in life?
 
 I had planned to retire as a teacher, so why now?
 
@@ -69,7 +68,9 @@ I don't experience competitive behavior, which in turn keeps me from derailing
 into all-nighters. They're also often very emotional, but that is nice for a
 change having worked a decade in the engine rooms.
 
-But why teach Computer Science at a business academy? Why not at university?
+## Why teach at a business academy?
+
+Why not at university?
 
 I was a teaching assistant on-and-off for 7 years at DIKU.
 
@@ -86,12 +87,14 @@ doing much more ambitious things. And "Because I became a dad" rang true to
 them: Parenthood and retirement are common reasons to become a teacher.
 
 I chose to teach computer programming at a school that provides a healthy
-working environment. I don't mind that proper scientific research is not part
-of my job description.
+working environment.
 
-But hearing myself fall into this stereotype, I have to give the realest reason:
+I don't mind that proper scientific research is not part of my job description.
 
-Because I enjoy computer programming.
+But hearing myself fall into this stereotype, I have to give the realest
+reason:
+
+## Because I love computer programming
 
 I really like it. It is my biggest hobby and, until 2020, my only sustained,
 intellectual hobby. (I study Chinese now, too.) Computer programming completely
@@ -101,15 +104,14 @@ to share that joy with people.
 Computer programming is one of the few addictions I can recommend, because you
 can start by playing with the computer by yourself and progress to become
 proficient, and your work may become useful and valuable. Even if you only ever
-do it for your own sake, it is worth spending your life on. You don't need to
-become an academic researcher just because Computer Science contains the word
-"Science" just like you don't need to become a biology researcher to appreciate
-nature.
+do it for your own sake, it is worth spending your life on.
+
+You don't need to become a biology researcher to appreciate nature, and you
+don't need to become an academic researcher just because Computer Science
+contains the word "Science".
 
 Being a professional computer programmer (in Denmark, at least) can provide you
-with a great deal of personal freedom in your work. Maybe this is not true in
-China, although I would probably have become a programmer had I grown up in
-China.
+with a great deal of personal freedom in your work.
 
 Teaching students at the university is easier: You don't really have to do as
 much, average students are committed to their own learning, and you can get
