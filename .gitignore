@@ -1,0 +1,11 @@
+# Hugo output
+public/
+public.tgz
+
+# Misc.
+.hugo_build.lock
+.direnv/
+resources/
+
+# Theme is vendored via Nix, don't commit
+themes/default

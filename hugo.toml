@@ -1,0 +1,43 @@
+baseURL = 'https://datamatik.blog/'
+languageCode = 'en-us'
+title = 'Datamatik'
+theme = 'default'
+
+# m10c parameters
+
+[[menu.main]]
+  name = "Front Page"
+  url = "/"
+  weight = 10
+
+[[menu.main]]
+  # identifier = ""
+  name = "About this blog"
+  url = "/about/"
+  weight = 20
+
+[params]
+  author = 'Simon Shine'
+  description = "A blog on Computer Science education"
+  avatar = '/img/sshine-triangles.png'
+  menu_item_separator = ' &middot; '
+
+[[params.social]]
+  icon = "brand-github"
+  name = "GitHub"
+  url = "https://github.com/sshine"
+
+[[params.social]]
+  icon = "brand-iterm2"
+  name = "Website"
+  url = "https://simonshine.dk"
+
+[[params.social]]
+  icon = "brand-nixos"
+  name = "nix.tools"
+  url = "https://nix.tools"
+
+[[params.social]]
+  icon = "brand-rust"
+  name = "Gordian Systems"
+  url = "https://gordian.systems"
