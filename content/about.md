@@ -1,6 +1,6 @@
 # About this blog
 
-Hello. My name is Simon Shine, and I'm a computer programmer from 1985.
+Hello. My name is Simon Shine, and I'm a computer programmer born in 1985.
 
 I am also a Computer Science teacher at [Erhvervsakademi København][ek], the
 largest business academy in Copenhagen. I teach computer programming and basic
@@ -32,27 +32,24 @@ Besides this blog, you can find me here:
 The least controversial reason is that my father was also a teacher.
 
 But since I have vowed to not be like him in all ways, becoming a teacher was
-also a choice. I first had the chance on my 2nd year of university when there
-was a shortage of 1st semester programming teaching assistants. I didn't apply
-because I felt students were better off with more senior students. But I had
-got a top grade, and functional programming was my favorite subject by then,
-so the professor took a chance and made me responsible for facilitating
-classroom exercise sessions. I never had a more successful run than my first,
-because I had to compensate for lack of teaching experience with effort, and
-I wasn't far from having just taken the class myself.
+also a choice. I first tried to teach on my 2nd year of university when there
+was a shortage of 1st semester functional programming teaching assistants (TAs).
+
+I didn't apply because I felt students were better off with more senior TAs.
+But I had got a top grade, and functional programming was my favorite subject
+by then, so the professor took a chance.
 
 Having been a teaching assistant throughout and beyond my university time
 shaped me a lot:
 - Facilitating a classroom is a great motivator to show up on time.
 - Presenting something in front of people is a great motivator to learn.
-- You're not supposed to know everything, you're supposed to demonstrate learning.
+- You're not supposed to know everything.
 
 Teaching university students who were often much smarter than myself, and
 sometimes much better than me at the taught subjects prior to their first
-class, created a sense of humility that has also shaped me since: I cannot
-guarantee to be the best at what I teach, or even the best teacher in the
-classroom, but I can, without much competition, be the most transparent
-learner.
+class, created a sense of humility that I stille have: I cannot guarantee to be
+the best at what I teach, or even the best teacher in the classroom, but I can,
+without much competition, be the most transparent learner.
 
 ## Why work as a teacher at this point in life?
 
@@ -77,8 +74,10 @@ I was a teaching assistant on-and-off for 7 years at DIKU.
 I eventually left because I needed to prove my worth as a programmer. Teaching
 is the most rewarding job I've had, but the university was the worst employer
 I've had. At one point they fired me (and a bunch of other teaching assistants)
-due to a nonsensical technical error. I decided that was my cue and have since
-explored professional programming.
+due to a [nonsensical legal error][ta-v2]. I decided that was my cue and have
+since explored professional programming.
+
+[ta-v2]: https://www.version2.dk/holdning/holdundervisere-fyres-paa-diku
 
 Coming back to become a teacher at a lower educational level, I have to answer
 this question because some colleagues at my school asked me at a Christmas
