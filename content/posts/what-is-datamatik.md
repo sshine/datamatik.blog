@@ -40,7 +40,8 @@ something works, but rather just how it works on the surface.
 
 Datamatiker is taught at 8 business academies in Denmark, and schools share the
 same study programme regulations. To make the same set of regulations fit 8
-schools, they are formulated very loosely.
+schools, they are formulated very loosely. For example, it doesn't say anywhere
+that Java must be used, but it just happens that almost everyone does use Java.
 
 2.5 years is a short time, and the framework is very flexible, which makes it
 very interesting to teach.
