@@ -6,19 +6,19 @@ theme = 'default'
 # m10c parameters
 
 [[menu.main]]
-  name = "Front Page"
+  name = "Forsiden"
   url = "/"
   weight = 10
 
 [[menu.main]]
   # identifier = ""
-  name = "About this blog"
-  url = "/about/"
+  name = "Om bloggen"
+  url = "/om-bloggen/"
   weight = 20
 
 [params]
   author = 'Simon Shine'
-  description = "A blog on Computer Science education"
+  description = "Om at være datamatiker-lærer"
   avatar = '/img/sshine-triangles.png'
   menu_item_separator = ' &middot; '
 
