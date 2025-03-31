@@ -12,8 +12,8 @@ serve:
 
 # Create new post in content/posts/
 post MDFILE:
-    mkdir -p content/posts
-    hugo new content 'content/posts/{{ MDFILE }}' || true
+    mkdir -p content/artikler
+    hugo new content 'content/artikler/{{ MDFILE }}' || true
 
 # Deploy to DIR on SERVER using tar/ssh/scp
 deploy SERVER='feng' DIR='/var/www/datamatik.blog':
