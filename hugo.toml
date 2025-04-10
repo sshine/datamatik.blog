@@ -41,3 +41,8 @@ theme = 'default'
   icon = "brand-rust"
   name = "Gordian Systems"
   url = "https://gordian.systems"
+
+[[params.social]]
+  icon = "code"
+  name = "Vis kildekode"
+  url = "https://github.com/sshine/datamatik.blog"
