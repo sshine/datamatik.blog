@@ -17,7 +17,7 @@ Og ja, hvis jeg ikke havde et fuldtidsjob, jeg var glad for, så arbejdede jeg n
 
 ## Indledning
 
-Jeg abonnerer på en søgemaskine, der hedder [Kagi][kagi], der koster $10/md.
+Jeg abonnerer på en søgemaskine, der hedder [Kagi][kagi]. Den koster $10/md.
 
 [kagi]: https://kagi.com
 
@@ -29,17 +29,23 @@ eksponeret for AI i et halvt års tid fra to vinkler:
 
 1. Igennem undervisning: Til dels benytter mine studerende AI, og man skal som
    underviser forholde sig til hvilken konsekvens det har for undervisningen.
-   Jeg opdagede fx først sent at opgavebesvarelserne til front-end web lignede
-   hinanden fordi en tredjedel af mine studerende på 3. semester
+   Jeg havde forsøgt at bruge ChatGPT i undervisningen, for at forstå hvordan
+   det virker. Jeg opdagede fx først sent at opgavebesvarelserne til front-end
+   web lignede hinanden fordi en tredjedel af mine studerende på 3. semester
    auto-genererede alt deres JavaScript.
 
 2. Igennem freelance: Samtidigt med jeg startede som lærer for et år siden, fik
    jeg også et nyt freelance gig, hvor jeg skulle bruge Nix og NixOS til at sætte
-   on-premise bygge- og testmiljø op til at afprøve firmware på hardware.
+   on-premise bygge- og testmiljø op til at afprøve firmware på hardware. Jeg
+   brugte Claude meget til at lære Nix. Nogle gange var det smart nok, men der
+   er meget kontekst som går tabt på AI'erne.
+
+På trods af begrænsningerne, var jeg positivt indstillet efter at have
+ignoreret det i et par år.
 
 ## Hvad er FastGPT?
 
-Når jeg søger på noget der slutter med et '?' vil søgemaskinen lave en
+Når jeg søger på noget der slutter med et '?' vil Kagi-søgemaskinen lave en
 sammenfatning af dens resultater. Selve søgningen tog i nedenstående tilfælde
 0,22 sekunder, mens AI-opsummeringen tager cirka 1-2 sekunder længere.
 
@@ -50,7 +56,7 @@ FastGPT har, efter min mening, de her killer features:
 - Hastigheden
 - At ethvert svar har kildehenvisninger
 - Hvor godt integreret den er i søgemaskinen
-- Kan finde ud af at sige "Det ved jeg ikke"!
+- **Kan finde ud af at sige "Det ved jeg ikke"!**
 - Er stadig bare en søgning med resultater.
 
 Jeg bruger også FastGPT meget fra mobil og fra [Raycast][raycast] på MacOS
@@ -64,7 +70,24 @@ Jeg bruger også FastGPT fra min Linux-terminal vha.
 
 Min brug af FastGPT har snart indhentet min brug af almindelig søgning.
 
+> **Bemærk:** Du kan faktisk prøve FastGPT gratis uden at være logget ind: https://kagi.com/fastgpt
+
 ![Hvad er FastGPT? Søgeresultat](/img/kagi-fastgpt-what.png)
+
+### En hurtig bemærkning om "Det ved jeg ikke!"
+
+Stiller man et spørgsmål, der er svært at finde svar på uden at knuse nogle tal fra en database:
+
+> **Q:** What is the average age of women when they have their second child in denmark?
+>
+> **A**: While the exact average age for women in Denmark having their second child isn't specified, it's reported that second, third, and fourth children are typically born when the mother is between 32 and 35 years old on average `[1]`. The average age of women giving birth to their first child is 30.3 years `[2]`.
+>
+> References:
+> 
+> 1. [What is the average age to have a baby Europe?](https://www.studycountry.com/wiki/what-is-the-average-age-to-have-a-baby-europe) `www.studycountry.com`
+> 2. [The average Dane - Statistics Denmark](https://www.dst.dk/en/Statistik/laer-om-statistik/gennemsnitsdanskeren) `www.dst.dk`
+
+Fordi dens svar er baseret på søgeresultater, kan den altså nemt svare i hvilken grad de indeholder et svar. Og problemer med kildekritik er tættere på at være de samme, som hvis man selv foretager research og gennemlæsning. Jeg tror ikke at FastGPT er lige så sårbar over for prompt injection, da dens algoritme er lidt simplere end en gennemsnitlig sprogmodel, men det ved jeg faktisk ikke.
 
 ## Hvad er Kagi's The Assistant?
 
@@ -107,9 +130,9 @@ statistik fra bunden af svaret:
 
 Svaret tog altså 38 sekunder, sammenlignet med FastGPT's 1-2 sekunder.
 
-Da The Assistant også benytter søgning, angiver den naturligvis også kilder.
+Eftersom The Assistant også benytter søgning, angiver den naturligvis også kilder.
 
-## Benchmark 1: Simple spørgsmål
+research-## Benchmark 1: Simple research-spørgsmål
 
 Spørger jeg FastGPT "In what way is Kagi's The Assistant an improvement over ChatGPT, Claude and similar LLMs?"
 
@@ -189,6 +212,36 @@ Assistent-svaret er meget mere detaljeret, men ud over at uddybe hvilke
 features The Assistant har, synes jeg FastGPT's overblik er nærmest lige så
 godt. Det er i hvert fald ikke 20 gange dårligere, og den var 20 gange
 hurtigere til at svare.
+
+Og man skal ikke huske at bede FastGPT om at være kortfattet. 
+
+## Benchmark 2: Simple tekniske spørgsmål
+
+Spørger jeg FastGPT:
+
+> **Q:** How do I write a literal backtick in inline markdown code?
+>
+> **A:** To write a literal backtick in inline markdown code, use multiple backticks as the opening and closing delimiters `[1][2]`. For example, to display a single backtick, use ``` `[3]`.
+
+Spørger jeg The Assistant:
+
+> **Q:** How do I write a literal backtick in inline markdown code?
+> 
+> **A:** To write a literal backtick (```) in inline markdown code, you need to use double backticks to enclose your code.
+>
+> For example, if you want to display a single backtick character, you would write:
+> ```` `` ``` ````
+>
+> If you need to include text with a backtick, you would write:
+> ```` ```code``` ````
+>
+> This will display as: `code`
+>
+> The key is using double backticks as delimiters when you need to display a single backtick within your inline code.
+
+Her er svarene også cirka lige gode, og The Assistant undlod at søge, så der er ingen referencer.
+
+Når svarene er cirka lige gode, foretrækker jeg at bruge FastGPT, da det går hurtigere.
 
 [^1]: [The Assistant by Kagi | Kagi's Docs](https://kagi.com/assistant#:~:text=The%20Assistant,creative%2C%20research%2C)
 [^2]: [Kagi Assistant | Hacker News](https://news.ycombinator.com/item?id=41448985#:~:text=The%20new,is%20excellent.)

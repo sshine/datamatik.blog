@@ -6,7 +6,7 @@ title = 'Om at blive rekursivt beruset med monoider'
 
 > **Disclaimer:** Jeg er *ikke* mixolog. Dette er *ikke* professionel cocktailrådgivning!
 
-> **Lyt i stedet:** Nogen lavede et podcast-afsnit om blogindlægget: [Haskell Weekly, Episode 26: Recursive Monoids][rec-monoid-podcast].
+> **Lyt i stedet:** Podcast-afsnittet [Haskell Weekly, Episode 26: Recursive Monoids][rec-monoid-podcast].
 
 [rec-monoid-podcast]: https://haskellweekly.news/episode/26.html
 
