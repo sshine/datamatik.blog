@@ -10,7 +10,9 @@ title = 'Om at blive rekursivt beruset med monoider'
 
 [rec-monoid-podcast]: https://haskellweekly.news/episode/26.html
 
-Jeg læste engang, at man kunne modellere cocktails som monoider.
+Jeg læste engang, at man kunne modellere cocktails som [monoider][monoid-wiki].
+
+[monoid-wiki]: https://en.wikipedia.org/wiki/Monoid
 
 Det er et virkelig cool eksempel på funktionsorienteret modellering, som jeg gerne vil uddybe.
 
