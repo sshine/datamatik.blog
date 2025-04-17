@@ -6,7 +6,7 @@ theme = 'default'
 # m10c parameters
 
 [[menu.main]]
-  name = "Forsiden"
+  name = "Indeks"
   url = "/"
   weight = 10
 
