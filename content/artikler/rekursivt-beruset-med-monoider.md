@@ -16,8 +16,6 @@ Jeg læste engang, at man kunne modellere cocktails som [monoider][monoid-wiki].
 
 Det er et virkelig cool eksempel på funktionsorienteret modellering, som jeg gerne vil uddybe.
 
-Lennart Kolmodin skrev engang, at dansetrinene i Tango også danner en monoid.
-
 Først vil jeg demonstrere min uvidenhed og antage, at cocktailopskrifter er frie kommutative monoider over ingredienser:
 
 [fcm]: https://ncatlab.org/nlab/show/free+commutative+monoid
