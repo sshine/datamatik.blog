@@ -38,7 +38,7 @@ En superdrinks består af:
 - 2 dele citron,
 - 3 dele superdrinks.
 
-Ifølge sketchen er der masser af dårlige måder at materialisere denne drink på. En særligt katastrofal måde er gennem approksimation: tag 1 del gin, 2 dele citron og 3 dele af hvad der er din nuværende bedste tilnærmelse af superdrinks. Gentag denne proces tilstrækkeligt mange gange, og du vil have en gradvist mere nøjagtig superdrinks.
+Ifølge sketchen er der masser af dårlige måder at materialisere denne drinks på. En særligt katastrofal måde er gennem approksimation: tag 1 del gin, 2 dele citron og 3 dele af hvad der er din nuværende bedste tilnærmelse af superdrinks. Gentag denne proces tilstrækkeligt mange gange, og du vil have en gradvist mere nøjagtig superdrinks.
 
 Rekursivt kan man opstille metoden som:
 
