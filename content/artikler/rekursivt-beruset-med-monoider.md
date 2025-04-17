@@ -4,7 +4,11 @@ draft = false
 title = 'Om at blive rekursivt beruset med monoider'
 +++
 
-**Disclaimer:** Jeg er *ikke* mixolog. Dette er *ikke* professionel cocktailrådgivning!
+> **Disclaimer:** Jeg er *ikke* mixolog. Dette er *ikke* professionel cocktailrådgivning!
+
+> **Lyt i stedet:** Nogen lavede et podcast-afsnit om blogindlægget: [Haskell Weekly, Episode 26: Recursive Monoids][rec-monoid-podcast].
+
+[rec-monoid-podcast]: https://haskellweekly.news/episode/26.html
 
 Jeg læste engang, at man kunne modellere cocktails som monoider.
 
@@ -84,7 +88,7 @@ og slå dem op [en](https://oeis.org/search?q=1%2C4%2C13%2C40%2C121), [efter](ht
 
 Inden det bliver for abstrakt, skal vi til at kode.
 
-Det bedste sprog til at udtrykke monoider med er selvfølgelig Haskell.
+Et godt sprog at programmere med monoider er selvfølgelig [Haskell](https://www.haskell.org/), som er relativt moderne.
 
 Følgende ingredienser er nok til at lave gin-tonic og superdrinks:
 
@@ -119,7 +123,10 @@ En konsekvens af denne modellering er:
 
 ```haskell
 > let gintonic = combine (1 `parts` Gin) (2 `parts` Tonic)
-> gintonic == combine gintonic gintonic
+> let double_gintonic = combine gintonic gintonic
+> double_gintonic
+Cocktail (fromList [(Gin,2),(Tonic,4)])
+> gintonic == double_gintonic
 False
 ```
 
@@ -154,7 +161,7 @@ Cocktail (fromList [])
 Cocktail (fromList [(Gin,1),(Tonic,2)])
 ```
 
-Det ville være fristende at specialisere `Eq Cocktail`-instansen til at bruge `normalize`, så `c == combine c c` for alle `c`. Men jeg kan ikke lide at gøre det, fordi hvis jeg nogensinde har brug for at sammenligne strukturel lighed, kan jeg ikke, hvorimod lighed under normalisering kan opnås med:
+Det ville være fristende at specialisere `Eq Cocktail`-instansen til at bruge `normalize`, så `c == combine c c` for alle `c`. Men jeg er ikke meget for at gøre det, fordi hvis jeg nogensinde har brug for at sammenligne strukturel lighed, kan jeg ikke, hvorimod lighed under normalisering kan opnås med:
 
 ```haskell
 > let (=~) = (==) `on` normalize
@@ -162,7 +169,7 @@ Det ville være fristende at specialisere `Eq Cocktail`-instansen til at bruge `
 True
 ```
 
-Det ville også være fristende at tilføje normalisering til `combine`, så kombinationen af to cocktails er en normaliseret cocktail. Men da blogindlægget her handler om cocktails som monoider, og `combine` er den bedste kandidat til en kompositionsoperator, bryder et sådant valg faktisk [monoiders associativitetslov][monoid-wiki]:
+Det ville også være fristende at tilføje normalisering til `combine`, så kombinationen af to cocktails er en normaliseret cocktail. Men da blogindlægget her handler om cocktails som monoider, og `combine` er den bedste kandidat til en kompositionsoperator, bryder et sådant valg faktisk [monoiders lov om associativitet][monoid-wiki]:
 
 [monoid-wiki]: https://en.wikipedia.org/wiki/Monoid#Definition
 
