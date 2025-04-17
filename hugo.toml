@@ -37,10 +37,10 @@ theme = 'default'
   name = "nix.tools"
   url = "https://nix.tools"
 
-[[params.social]]
-  icon = "brand-rust"
-  name = "Gordian Systems"
-  url = "https://gordian.systems"
+#[[params.social]]
+#  icon = "brand-rust"
+#  name = "Gordian Systems"
+#  url = "https://gordian.systems"
 
 [[params.social]]
   icon = "code"
