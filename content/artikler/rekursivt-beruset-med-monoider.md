@@ -12,7 +12,7 @@ Det er et virkelig cool eksempel på funktionsorienteret modellering, som jeg ge
 
 Lennart Kolmodin skrev engang, at dansetrinene i Tango også danner en monoid.
 
-Først vil jeg demonstrere min uvidenhed og antage, at cocktailopskrifter er [frie kommutative monoider][fcm] over ingredienser:
+Først vil jeg demonstrere min uvidenhed og antage, at cocktailopskrifter er frie kommutative monoider over ingredienser:
 
 [fcm]: https://ncatlab.org/nlab/show/free+commutative+monoid
 
@@ -84,6 +84,8 @@ og slå dem op [en](https://oeis.org/search?q=1%2C4%2C13%2C40%2C121), [efter](ht
 
 Inden det bliver for abstrakt, skal vi til at kode.
 
+Det bedste sprog til at udtrykke monoider med er selvfølgelig Haskell.
+
 Følgende ingredienser er nok til at lave gin-tonic og superdrinks:
 
 ```haskell
@@ -129,8 +131,7 @@ Ellers ender opskrifterne med at sige "2 dele gin, 4 dele tonic" eller "0 dele g
 
 ```haskell
 normalize :: Cocktail -> Cocktail
-normalize (Cocktail ingredients) =
-  Cocktail . normalize' $ ingredients
+normalize (Cocktail ingredients) = Cocktail (normalize' ingredients)
   where
     scale = foldr1 gcd (Map.elems ingredients)
     normalize' = Map.map (`div` scale) . Map.filter (/= 0)
@@ -175,7 +176,7 @@ Cocktail (fromList [(Gin,2),(Tonic,1)])
 Cocktail (fromList [(Gin,1),(Tonic,1)])
 ```
 
-(Når man kombinerer tre ting, bør det være lige meget om man kombinerer til venstre eller til højre først.)
+*(Når man kombinerer tre ting, bør det være lige meget om man kombinerer til venstre eller til højre først, men det er ikke sandt når man normaliserer efter hver kombinering.)*
 
 Så selvom jeg kan lide tanken om at normalisere cocktailopskrifter, ville det sandsynligvis være en dårlig idé at gøre det til en del af `Semigroup Cocktail`-instansen, hvilket efterlader de meget enklere typeklasse-instanser:
 
@@ -187,7 +188,7 @@ instance Monoid Cocktail where
   mempty = emptyCocktail
 ```
 
-Dette rejser spørgsmålet: Er glasset halvt fyldt eller halvt `mempty`?
+Ovenstående rejser spørgsmålet: Er glasset halvt fyldt eller halvt `mempty`?
 
 Hvad angår superdrinks, kan opskriften nu udtrykkes med kode som:
 
@@ -203,16 +204,16 @@ rounds :: Natural -> Cocktail -> Cocktail
 rounds n = mconcat . genericReplicate n
 ```
 
-Er den bedste tilnærmelse er ved brug af en `base` af `mempty`?
+Er den bedste tilnærmelse ved brug af en `base` af `mempty`?
 
-Eller, som revysketchen foreslår, `parts n Gin`?
+Eller, som revysketchen foreslår, ``n `parts` Gin``?
 
 Det handler nok om hvor fuld man ønsker at blive.
 
 For en femte approksimation af superdrinks med ren gin som nulte approksimation,
 
 ```haskell
-> normalize $ superdrinks 5 (1 `parts` Gin)
+> normalize . superdrinks 5 $ 1 `parts` Gin
 Cocktail (fromList [(Gin,182),(Lemon,121)])
 ```
 
