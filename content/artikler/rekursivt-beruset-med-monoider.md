@@ -38,7 +38,7 @@ En superdrinks består af:
 - 2 dele citron,
 - 3 dele superdrinks.
 
-Ifølge sketchen er der masser af dårlige måder at materialisere denne drinks på. En særligt katastrofal måde er gennem approksimation: tag 1 del gin, 2 dele citron og 3 dele af hvad der er din nuværende bedste tilnærmelse af superdrinks. Gentag denne proces tilstrækkeligt mange gange, og du vil have en gradvist mere nøjagtig superdrinks.
+Ifølge sketchen er der masser af dårlige måder at materialisere denne drinks på. En særligt katastrofal måde er gennem approksimation: tag 1 del gin, 2 dele citron og 3 dele af hvad der er din nuværende bedste tilnærmelse af superdrinks. Gentag processen tilstrækkeligt mange gange, og du får en gradvist mere nøjagtig superdrinks.
 
 Rekursivt kan man opstille metoden som:
 
@@ -62,7 +62,9 @@ superdrinks(2) = 1 × gin + 2 × lemon + 3 × superdrinks(1)
                = 4 × gin + 8 × lemon + 9 × superdrinks(0)
 ```
 
-Forholdet mellem antallet af dele af hver ingrediens kan udtrykkes i lukket form, der eliminerer rekursion:
+Forholdet mellem antallet af dele af hver ingrediens kan udtrykkes i [lukket form][closed-form], der eliminerer rekursion:
+
+[closed-form]: https://en.wikipedia.org/wiki/Closed-form_expression
 
 ```
 superdrinks(n) = (3ⁿ - 1)/2 × gin
@@ -70,8 +72,9 @@ superdrinks(n) = (3ⁿ - 1)/2 × gin
                + 3ⁿ × superdrinks(0)
 ```
 
-Du kan finde den lukkede form enten ved at genkende, at serien 3 × 3 × ... med n forekomster er 3ⁿ, at der altid er én del citron mindre end superdrinks(0), og at der altid er halvt så meget gin som det; eller du kan løse deres [rekurrensrelation][rr]; eller du kan udvide de tre talserier ved brug af en funktion,
+Du kan finde den lukkede form enten ved at genkende, at serien 3 × 3 × ... med n forekomster er 3ⁿ, at der altid er én del citron mindre end superdrinks(0), og at der altid er halvt så meget gin som det; eller du kan [løse][solve-rr] deres [rekurrensrelation][rr]; eller du kan udvide de tre talserier ved brug af en funktion,
 
+[solve-rr]: https://www.youtube.com/watch?v=ZFt3VZb6y_g
 [rr]: https://en.wikipedia.org/wiki/Recurrence_relation
 
 ```haskell
@@ -80,7 +83,7 @@ Du kan finde den lukkede form enten ved at genkende, at serien 3 × 3 × ... med
 ([0,1,4,13,40,121],[0,2,8,26,80,242],[1,3,9,27,81,243])
 ```
 
-og slå dem op [en](https://oeis.org/search?q=1%2C4%2C13%2C40%2C121), [efter](https://oeis.org/search?q=2%2C8%2C26%2C80%2C242), [en](https://oeis.org/search?q=3%2C9%2C27%2C81%2C243) på [OEIS.org](https://oeis.org/).
+og slå dem op [en](https://oeis.org/search?q=1%2C4%2C13%2C40%2C121), [efter](https://oeis.org/search?q=2%2C8%2C26%2C80%2C242), [en](https://oeis.org/search?q=3%2C9%2C27%2C81%2C243) i talserie-databasen på [OEIS.org](https://oeis.org/).
 
 ## Det er på tide at blive [schwifty][schwifty]!
 
