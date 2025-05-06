@@ -4,7 +4,7 @@ draft = false
 title = 'Hvordan understøtter man europæisk cloud i undervisningen?'
 +++
 
-## *tl;dr* (den korte version):
+## *tl;dr* (den ultra korte version):
 
 På Erhvervsakademi København 
 
@@ -14,11 +14,11 @@ På Erhvervsakademi København
 
 Det var det.
 
-## Den lange version
+## En opsummering af artiklen nedenfor:
 
 - Ved at undervise i cloud-agnostisk teknologi og aldrig vendor-locked features
   - Eksempler på cloud-agnostisk teknologi: Docker Compose, Linux, SSH, Terraform, Ansible, Kubernetes, [GitOps][gitops], [CNCF][cncf-about] (Cloud Native Computing Foundation), [Fediversity][fediversity], [WASI][wasi] (WebAssembly System Interface)
-  - Eksempler på vendor-locked features: Azure Web Apps, managed databaser, alt på tre bogstaver i AWS, samtlige *serverless* services
+  - Eksempler på vendor-locked features: Azure Web Apps, managed databaser, alt på tre bogstaver i AWS, samtlige *serverless* services, som ikke kan self-hostes
 - Der findes ikke europæiske alternativer til de store amerikanske clouds
 - Der findes suveræne cloud-baserede alternativer, hvis man siger "cloud" er et spektrum
 - Suverænitet opnås igennem ejerskab frem for outsourcing af drift og intellekt
