@@ -30,7 +30,9 @@ Det var det.
 
 ## Hvordan forstås suverænitet?
 
-> "The cloud is just someone else's computer." - anonym
+> "The cloud is just someone else's computer." - [Jeff Atwood][ja-cloud] (StackOverflow co-founder)
+
+[ja-cloud]: https://blog.codinghorror.com/the-cloud-is-just-someone-elses-computer/
 
 I mit ene år som datamatiker-lærer har jeg oplevet to politiske mærkesager, der
 er blevet blandet ind i undervisningen. Den første er bæredygtighed, og den
